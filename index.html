@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PERSONAL PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CDN -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo" />
+                <ul>
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>aspiring software engineer</p>
+                <h1>HI! I'm Ishpreet from India</h1>
+            </div>
+        </div>
+        <div class="right-bg"></div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/user.jpg" />
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>
+                        I am a dedicated and ambitious individual currently pursuing a
+                        Bachelor’s degree in Computer Science Engineering at Chandigarh
+                        University. With a passion for technology and innovation, I am
+                        eager to delve into the diverse fields within computer science,
+                        including software development and artificial intelligence.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            skills
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">
+                            education
+                        </p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C Programming</span></li>
+                            <li><span>C++ Programming</span></li>
+                            <li>
+                                <span>Web Development</span><br />
+                                Web app development
+                            </li>
+                            <li>
+                                <span>Problem Solving</span><br />
+                                Critical thinking
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>Class 10th</span><br />2020-2021<br />
+                                Ryan International School, Noida
+                            </li>
+                            <li>
+                                <span>Class 12th</span><br />2022-2023<br />PCM<br />
+                                Ryan International School, Noida
+                            </li>
+                            <li>
+                                <span>Undergraduation</span><br />2024-2028<br />BE-CSE<br />
+                                Chandigarh University, Punjab
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="work">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Expense Tracker</h2>
+                    <p>
+                        Managing personal finances just got easier with this simple and
+                        user-friendly web app. You can now:
+                        <br />
+                        • Set your monthly budget
+                        <br />
+                        • Track your expenses by category and date
+                        <br />
+                        • Visualize your spending with pie charts
+                        <br />
+                        • Monitor your total expenses and remaining budget
+                        <br />
+                        • Add and delete entries with ease
+                        <br /><br />
+                        Built with HTML, CSS, JavaScript, and Chart.js, this app is
+                        perfect for anyone wanting better control over their spending
+                        habits.
+                    </p>
+                </div>
+                <div>
+                    <h2>AI-Based Sign Language Converter</h2>
+                    <p>
+                        Developed an AI-based Sign-to-Speech Converter—a tool designed
+                        to bridge the communication gap for the hearing and speech
+                        impaired by translating sign language into spoken words in real
+                        time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">contact me</h1>
+                    <p>
+                        <i class="fa-solid fa-paper-plane"></i> ishpreet394@gmail.com
+                    </p>
+                    <p><i class="fa-solid fa-phone"></i> 9311262577</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/ishpreet-2006at"
+                            ><i class="fa-brands fa-linkedin-in"></i
+                        ></a>
+                        <a href="https://github.com/ishpreet27"
+                            ><i class="fa-brands fa-github"></i
+                        ></a>
+                    </div>
+                    <a href="images/resume final.pdf" download class="button button2"
+                        >download CV</a
+                    >
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="your name" required />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="your email"
+                            required
+                        />
+                        <textarea
+                            name="message"
+                            rows="6"
+                            placeholder="your message"
+                        ></textarea>
+                        <button type="submit" class="button button2">submit</button>
+                    </form>
+                    <div
+                        id="form-message"
+                        style="margin-top: 10px; color: green; font-weight: bold"
+                    ></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Ishpreet. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL =
+            "https://script.google.com/macros/s/AKfycbz1CD4jLYrmUBSA0ybK-ywFqaNJ4PwFDR8ByouUHyj8TtbQG0tHLT8SWh-xsxh-C5tu/exec";
+        const form = document.forms["submit-to-google-sheet"];
+        const messageDiv = document.getElementById("form-message");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                .then((response) => {
+                    console.log("Success!", response);
+                    messageDiv.style.color = "green";
+                    messageDiv.textContent = "Message sent successfully!";
+                    form.reset();
+                })
+                .catch((error) => {
+                    console.error("Error!", error.message);
+                    messageDiv.style.color = "red";
+                    messageDiv.textContent = "Oops! Something went wrong.";
+                });
+        });
+    </script>
+</body>
+</html>
